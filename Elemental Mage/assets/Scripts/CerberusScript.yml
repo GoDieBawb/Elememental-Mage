@@ -1,0 +1,14 @@
+Proximity:
+  Distance: 5
+  Enter:
+    - if player.inventory.contains#KilledCerberus
+    - chat "The dead body of Cerberus lies here."
+    - else
+    - chat "Cerberu rips your face right off of your face"
+
+Hit:
+  Script:
+    - if player.spell_type#Poison
+    - chat "As the poison strikes Cerberus he dies immediately."
+    - else
+    - chat "The spell has no effect on Cerberus... Perhaps he has a weakness."

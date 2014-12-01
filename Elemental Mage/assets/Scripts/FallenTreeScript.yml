@@ -1,0 +1,22 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if entity.ishid.!
+    - chat "A fallen tree blocks the path here"
+
+Hit:
+  Script:
+    - if entity.ishid.!
+    - hide
+    - chat "As the spell hits the tree it burns away"
+
+Start:
+  Script:
+    - if entity.ishid
+    - show
+    - debug "Showing the hidden log"
+
+Interact:
+  Script:
+    - if entity.ishid.!
+    - chat "This tree has died and fallen over... It seems much too heavy to move."

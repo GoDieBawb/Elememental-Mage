@@ -1,0 +1,16 @@
+Proximity:
+  Distance: 2
+  Script:
+    - chat "A poison fountain..."
+
+Interact:
+  Script:
+    - if player.inventory.contains#PoisonSpell.!
+    - chat "You have discovered the Poison Spell! You are now empowered with the Poison Spell"
+    - give PoisonSpell
+    - setspell Poison
+    - end
+    - if player.spell_type#Poison.!
+    - chat "You now are empowered with the ice spell!"
+    - setspell Poison
+    

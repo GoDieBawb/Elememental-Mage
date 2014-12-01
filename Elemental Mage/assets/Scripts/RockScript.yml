@@ -1,0 +1,9 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "There seems to be enough space in these rocks for you to fit."
+
+Interact:
+  Script:
+    - chat "You squeeze your way through the rocks"
+    - changescene FireDungeon

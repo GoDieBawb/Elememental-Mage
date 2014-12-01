@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 4
+  Enter:
+    - chat "Gate to the Forest"
+
+Interact:
+  Script:
+    - changescene Forest

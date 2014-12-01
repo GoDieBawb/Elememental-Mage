@@ -1,0 +1,12 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "Door to Clara's House"
+
+Interact:
+  Script:
+    - changescene ClaraHouse
+
+Hit:
+  Script:
+    - chat "Quit shooting my house!"

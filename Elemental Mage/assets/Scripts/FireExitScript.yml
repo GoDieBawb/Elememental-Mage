@@ -1,0 +1,9 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "You can climb these to get out."
+
+Interact:
+  Script:
+    - changescene Forest
+    - move player entity#Rocks.location

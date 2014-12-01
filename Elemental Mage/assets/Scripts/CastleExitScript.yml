@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "Door to Castle Courtyard"
+
+Interact:
+  Script:
+    - changescene Castle

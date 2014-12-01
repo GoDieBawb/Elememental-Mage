@@ -1,0 +1,14 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if entity#Tree.ishid
+    - chat "Gate to Field"
+    - else
+    - chat "A Fallen Tree Blocks this gate"
+
+Interact:
+  Script:
+    - if entity#Tree.ishid.!
+    - chat "A tree is blocking this gate from being used."
+    - else
+    - changescene Field
