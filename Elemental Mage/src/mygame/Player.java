@@ -57,7 +57,7 @@ public class Player extends Node {
                             .getControl(AnimControl.class);
       animChannel = animControl.createChannel();
       animChannel.setAnim("FkIdle");
-      model.scale(.1f);
+      model.scale(.09f);
       attachChild(model);
       model.setLocalTranslation(0,1f,0);
   
