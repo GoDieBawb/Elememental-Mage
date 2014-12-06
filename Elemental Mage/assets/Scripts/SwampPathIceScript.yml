@@ -1,0 +1,18 @@
+Start:
+  Script:
+    - hide
+
+Hit:
+  Script:
+    - if player.spell_type#Ice && entity.ishid
+    - chat "You freeze the Poisoned Water."
+    - show
+    - elseif player.spell_type#Ice
+    - chat "Attempting to freeze the ice... Does nothing."
+    - elseif player.spell_type#Fire && entity.ishid
+    - chat "Well... The fire had no effect on the water."
+    - elseif player.spell_type#Fire
+    - chat "The fire melts the ice"
+    - hide
+    - else
+    - chat "That accomplished nothing"

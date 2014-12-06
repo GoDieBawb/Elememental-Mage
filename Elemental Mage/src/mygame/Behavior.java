@@ -34,7 +34,7 @@ public class Behavior {
   
   public void setScript() {
       
-      String filePath   = System.getProperty("user.home")+ "/Documents/Shadow Avenger/assets/Scripts/";
+      String filePath   = System.getProperty("user.home")+ "/Documents/GitHub/Elememental-Mage/Elemental Mage/assets/Scripts/";
       stateManager.getApplication().getAssetManager().registerLoader(ScriptLoader.class, "yml");
       Object obj;
       System.out.println(entity.getName() + "'s script is: "+ script + ".yml");
