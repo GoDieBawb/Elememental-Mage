@@ -119,10 +119,6 @@ public class CommandParser {
                 stateManager.getState(PlayerManager.class).player.fail();
                 
                 stateManager.getState
-                        (SceneManager.class).initScene
-                            ("Scenes/Town.j3o");
-                
-                stateManager.getState
                         (GuiManager.class).delayAlert
                ("Awakening", "You Wake Up... But the nightmare had seemed so... Real", 3);
 

@@ -4,8 +4,10 @@ Proximity:
     - chat "I'm a Demon and I have taken over this Castle... Turn back now if you want to live."
 
 Hit:
-  - if player.spell_type#Light
-  - chat "How! Now I'm dying... Oh noes... death"
-  - else
-  - chat "Ha... That has no effect on me. I gave you a chance. Now you die!"
-  - fail
+  Script:
+    - if player.spell_type#Light
+    - chat "How! Now I'm dying... Oh noes... death"
+
+    - else
+    - chat "Ha... That has no effect on me. I gave you a chance. Now you die!"
+    - fail

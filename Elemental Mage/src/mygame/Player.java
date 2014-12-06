@@ -65,12 +65,7 @@ public class Player extends Node {
   
   public void fail() {
       
-      System.out.println("Fail");
-      System.out.println(System.currentTimeMillis()/1000 -  failTime);
-      hasFailed = true;
-      failTime  = System.currentTimeMillis() / 1000;
-      inventory.clear();
-      dropItem();
+    stateManager.getState(SceneManager.class).initScene("Scenes/PlayerHouse.j3o");
   
   }
   

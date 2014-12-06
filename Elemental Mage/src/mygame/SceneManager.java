@@ -41,7 +41,7 @@ public class SceneManager extends AbstractAppState {
     rootNode            = this.app.getRootNode();
     scene               = new Node();
     physics             = this.stateManager.getState(PlayerManager.class).physics;
-    initScene("Scenes/Forest.j3o");
+    initScene("Scenes/PlayerHouse.j3o");
     }
   
   public void initScene(String scenePath) {
