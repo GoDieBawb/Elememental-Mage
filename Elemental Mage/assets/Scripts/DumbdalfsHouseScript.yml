@@ -1,8 +1,0 @@
-Proximity:
-  Distance: 2
-  Enter:
-    - chat "Door to Dumbledalf's House"
-
-Interact:
-  Script:
-    - changescene DumbdalfsHouse
