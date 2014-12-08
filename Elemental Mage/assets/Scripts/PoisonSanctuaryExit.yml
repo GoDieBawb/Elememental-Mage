@@ -1,8 +1,0 @@
-Proximity:
-  Distance: 2
-  Enter:
-    - chat "Door to the Poison House"
-
-Interact:
-  Script:
-    - changescene PoisonHouse
