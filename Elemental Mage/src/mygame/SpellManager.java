@@ -23,6 +23,7 @@ public class SpellManager extends AbstractAppState {
     public  Node      spellNode;
     private Node      entityNode;
     private Material  iceMat;
+    private Material  poisMat;
     
     @Override
     public void initialize(AppStateManager stateManager, Application app) {
@@ -32,6 +33,8 @@ public class SpellManager extends AbstractAppState {
         entityNode = stateManager.getState(EntityManager.class).entityNode;
         iceMat     = new Material(app.getAssetManager(), "Common/MatDefs/Misc/Unshaded.j3md");
         iceMat.setColor("Color", ColorRGBA.Cyan);
+        poisMat     = new Material(app.getAssetManager(), "Common/MatDefs/Misc/Unshaded.j3md");
+        poisMat.setColor("Color", ColorRGBA.Green);
         ((SimpleApplication) app).getRootNode().attachChild(spellNode);
         
     }
@@ -51,6 +54,14 @@ public class SpellManager extends AbstractAppState {
             spell.effect.setStartColor(ColorRGBA.Blue);
             spell.effect.setStartColor(ColorRGBA.Cyan);
             spell.getChild("Target").setMaterial(iceMat);
+            
+        }
+        
+        if (player.spellType.equals("Poison")) {
+            
+            spell.effect.setStartColor(ColorRGBA.Yellow);
+            spell.effect.setStartColor(ColorRGBA.Green);
+            spell.getChild("Target").setMaterial(poisMat);
             
         }
         

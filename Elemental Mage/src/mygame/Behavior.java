@@ -45,8 +45,8 @@ public class Behavior {
           Yaml yaml            = new Yaml();
           File file            = new File(filePath + script + ".yml");
           FileInputStream fi   = new FileInputStream(file);
-          obj                   = yaml.load(fi);
-          map                   = (LinkedHashMap) obj;
+          obj                  = yaml.load(fi);
+          map                  = (LinkedHashMap) obj;
           }
           
           catch (Exception f) {

@@ -1,7 +1,7 @@
 Proximity:
-  Distance: 6
+  Distance: 2
   Enter:
-    - chat "Gate to Forest"
+    - chat "Door to Forest"
 
 Interact:
   Script:

@@ -1,0 +1,12 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "Welcome to my home"
+
+Interact:
+  Script:
+    - chat "Do you need something from me?"
+
+While:
+  Script:
+    - look

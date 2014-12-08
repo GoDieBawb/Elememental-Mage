@@ -13,5 +13,6 @@ Hit:
   Script:
     - if player.spell_type#Fire
     - chat "The block of ice melts away"
+    - hide
     - else
     - chat "Seems to have no effect."
