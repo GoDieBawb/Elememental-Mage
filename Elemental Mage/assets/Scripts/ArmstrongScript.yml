@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "The Castle has been taken!"
+
+Interact:
+  Script:
+    - chat "The Gate has been locked and the Gate Keeper has evacuated to the beach. We need the key."

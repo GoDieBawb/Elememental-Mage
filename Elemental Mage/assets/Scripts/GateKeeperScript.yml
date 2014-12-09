@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "Do you have news from the Castle?"
+
+Interact:
+  Script:
+    - chat "Have you spoken to Captain Armstrong?"

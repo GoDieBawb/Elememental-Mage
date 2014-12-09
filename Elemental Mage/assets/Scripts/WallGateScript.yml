@@ -2,8 +2,4 @@ Proximity:
   Distance: 2
   Enter:
     - if entity.ishid.!
-    - chat "The Gate seems to be closed"
-
-Start:
-  Script:
-    - hide
+    - chat "The Gate is locked."
