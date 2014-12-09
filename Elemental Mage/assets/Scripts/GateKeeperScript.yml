@@ -5,4 +5,10 @@ Proximity:
 
 Interact:
   Script:
+    - if player.inventory.contains#Key
+    - chat "Good luck taking back the Castle!"
+    - elseif player.inventory.contains#armstrongTalk
+    - chat "You plan on taking back the Castle? Here is the key! Good Luck!"
+    - give Key
+    - else
     - chat "Have you spoken to Captain Armstrong?"

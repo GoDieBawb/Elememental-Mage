@@ -1,11 +1,11 @@
 Proximity:
   Distance: 3
   Enter:
-    - chat "Welcome to my home"
+    - chat "This isn't good!"
 
 Interact:
   Script:
-    - chat "Do you need something from me?"
+    - chat "There's problems in the Graveyard! I've sent Archer to check"
 
 While:
   Script:

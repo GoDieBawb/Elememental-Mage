@@ -5,4 +5,17 @@ Proximity:
 
 Interact:
   Script:
+    - if player.inventory.contains#openedGate
+    - chat "I'll stay here and you save the King. But remember only the Light Spell will work on him..."
+  
+    - elseif player.inventory.contains#Key
+    - chat "You have the key! I'll open the gate."
+    - give openedGate
+    - hide entity#Gate
+  
+    - elseif player.inventory.contains#armstrongTalk
+    - chat "Get the key from the GateKeeper at the beach! Tell him we plan to take back the Castle!"
+  
+    - else
     - chat "The Gate has been locked and the Gate Keeper has evacuated to the beach. We need the key."
+    - give armstrongTalk
