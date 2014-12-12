@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "Welcome to my home!"
+
+Interact:
+  Script:
+    - chat "I'm from a village up in the mountains. They say a temple there can give you the power of ice!"
