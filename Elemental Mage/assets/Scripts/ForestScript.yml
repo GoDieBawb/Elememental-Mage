@@ -1,4 +1,0 @@
-Start:
-  Script:
-    - setmodel player Mage
-    - setspell Fire

@@ -103,7 +103,7 @@ public class SpellManager extends AbstractAppState {
                 
             }
             
-            if (System.currentTimeMillis() / 1000 - currentSpell.startTime > 5) {
+            if (System.currentTimeMillis() / 1000 - currentSpell.startTime > 10) {
             
                 currentSpell.removeFromParent();
             

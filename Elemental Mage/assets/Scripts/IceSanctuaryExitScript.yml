@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 5
+  Enter:
+    - chat "Door to Ice Temple"
+
+Interact:
+  Script:
+    - changescene IceTemple

@@ -101,9 +101,13 @@ public class Behavior {
   
   public void hitAction() {
   
-      Map<Object, Object> hm  = (Map<Object, Object>)  map.get("Hit");
-      ArrayList hitScript     = (ArrayList) hm.get("Script");
-      entity.manager.parser.parse(hitScript, entity);
+      if (map.get("Hit") != null) {
+          
+          Map<Object, Object> hm  = (Map<Object, Object>)  map.get("Hit");
+          ArrayList hitScript     = (ArrayList) hm.get("Script");
+          entity.manager.parser.parse(hitScript, entity);
+          
+      }
   
   }
   

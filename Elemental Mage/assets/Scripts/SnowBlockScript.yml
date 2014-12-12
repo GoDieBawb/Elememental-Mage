@@ -14,6 +14,8 @@ Hit:
     - if player.spell_type#Fire
     - give meltBlock
     - chat "The fire melts the ice blocking the path away."
+    - hide
+
     - else
     - chat "Doesnt seem to have any effect."
 

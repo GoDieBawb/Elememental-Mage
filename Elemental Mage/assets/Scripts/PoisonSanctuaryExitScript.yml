@@ -1,5 +1,5 @@
 Proximity:
-  Distance: 3
+  Distance: 5
   Enter:
     - chat "Door to the Poison House"
 

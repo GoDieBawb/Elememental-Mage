@@ -1,6 +1,6 @@
 Proximity:
-  Distance: 2
-  Script:
+  Distance: 5
+  Enter:
     - chat "A fountain of light..."
 
 Interact:
@@ -10,6 +10,7 @@ Interact:
     - chat "You have discovered the Light Spell! You are now empowered with the Light Spell"
     - setspell Light
     - end
+
     - if player.spell_type#Light.!
     - chat "You now are empowered with the ice spell!"
     - setspell Light

@@ -5,7 +5,7 @@ Proximity:
 
 Interact:
   Script:
-    - chat "There's problems in the Graveyard! I've sent Archer to check"
+    - chat "A Demon Dog has taken over the Temple of Light! This must be reported to the Castle immediately!"
 
 While:
   Script:

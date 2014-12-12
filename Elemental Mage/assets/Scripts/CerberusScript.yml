@@ -10,5 +10,6 @@ Hit:
   Script:
     - if player.spell_type#Poison
     - chat "As the poison strikes Cerberus he dies immediately."
+    - die
     - else
     - chat "The spell has no effect on Cerberus... Perhaps he has a weakness."
