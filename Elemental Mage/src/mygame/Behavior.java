@@ -42,18 +42,21 @@ public class Behavior {
       try {
           
           try {
-          Yaml yaml            = new Yaml();
-          File file            = new File(filePath + script + ".yml");
-          FileInputStream fi   = new FileInputStream(file);
-          obj                  = yaml.load(fi);
-          map                  = (LinkedHashMap) obj;
+              
+              Yaml yaml            = new Yaml();
+              File file            = new File(filePath + script + ".yml");
+              FileInputStream fi   = new FileInputStream(file);
+              obj                  = yaml.load(fi);
+              map                  = (LinkedHashMap) obj;
+              
           }
           
           catch (Exception f) {
-          System.out.println("Ill check the jar");
-          filePath   = "Scripts/";
-          obj        = stateManager.getApplication().getAssetManager().loadAsset(filePath + script + ".yml");
-          map        = (LinkedHashMap) obj;
+              
+              filePath   = "Scripts/";
+              obj        = stateManager.getApplication().getAssetManager().loadAsset(filePath + script + ".yml");
+              map        = (LinkedHashMap) obj;
+              
           }
           
       }
