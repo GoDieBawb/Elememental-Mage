@@ -4,6 +4,7 @@ package mygame;
 import com.jme3.app.state.AppStateManager;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -34,6 +35,7 @@ public class Behavior {
   
   public void setScript() {
       
+      Yaml yaml         = new Yaml();
       String filePath   = System.getProperty("user.home")+ "/Documents/GitHub/Elememental-Mage/Elemental Mage/assets/Scripts/";
       stateManager.getApplication().getAssetManager().registerLoader(ScriptLoader.class, "yml");
       Object obj;
@@ -43,11 +45,26 @@ public class Behavior {
           
           try {
               
-              Yaml yaml            = new Yaml();
-              File file            = new File(filePath + script + ".yml");
-              FileInputStream fi   = new FileInputStream(file);
-              obj                  = yaml.load(fi);
-              map                  = (LinkedHashMap) obj;
+              
+              try {
+                 
+                 File file            = new File(filePath + script + ".yml");
+                 FileInputStream fi   = new FileInputStream(file);
+                 obj                  = yaml.load(fi);
+                 map                  = (LinkedHashMap) obj;
+                 
+              }
+              
+              catch(FileNotFoundException fnf) {
+                  
+                 filePath = System.getProperty("user.home")+ "/Documents/Mods/Elemental Mage/Scripts/";
+                 File file            = new File(filePath + script + ".yml");
+                 FileInputStream fi   = new FileInputStream(file);
+                 obj                  = yaml.load(fi);
+                 map                  = (LinkedHashMap) obj;
+                  
+              }
+              
               
           }
           
