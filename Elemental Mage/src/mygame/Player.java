@@ -98,6 +98,9 @@ public class Player extends Node {
   
       if (!spellType.equals("None"))
       stateManager.getState(SpellManager.class).makeSpell(this, stateManager);
+      
+      else
+      stateManager.getState(GuiManager.class).showAlert("Magic", "You currently do not have any spells.");
   
   }
   

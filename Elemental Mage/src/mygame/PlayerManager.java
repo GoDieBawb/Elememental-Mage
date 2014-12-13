@@ -32,7 +32,7 @@ public class PlayerManager extends AbstractAppState {
   @Override
   public void update(float tpf) {
   
-      if (player.getLocalTranslation().y < -25) {
+      if (player.getLocalTranslation().y < -5) {
       
           stateManager.getState
                   (GuiManager.class).showAlert("No Escape", "As you fall into the darkness awaiting the sweet release of death... You wake up back where you started");
