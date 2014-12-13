@@ -1,15 +1,27 @@
-
-
 Proximity:
   Distance: 5
   Enter:
+    - if player.inventory.contains#KilledDemon
+    - chat "The Demon's Dead Body lies here on the ground."
+
+    - else
     - chat "I'm a Demon and I have taken over this Castle... Turn back now if you want to live."
 
 Hit:
   Script:
-    - if player.spell_type#Light
+    - if player.inventory.contains#KilledDemon
+    - chat "The spell strikes the Demon's Dead Body."
+
+    - elseif player.spell_type#Light
     - chat "How! Now I'm dying... Oh noes... death"
+    - die
+    - give KilledDemon
 
     - else
     - chat "Ha... That has no effect on me. I gave you a chance. Now you die!"
     - fail
+
+Start:
+  Script:
+    - if player.inventory.contains#KilledDemon
+    - die
