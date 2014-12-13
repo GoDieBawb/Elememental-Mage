@@ -5,4 +5,4 @@ Proximity:
  
 Interact:
   Script:
-    - changescene MountainVillage
+    - changescene MountainVillage entity#IcePathExit.location

@@ -5,4 +5,4 @@ Proximity:
 
 Interact:
   Script:
-    - changescene Swamp
+    - changescene Swamp entity#SwampPathExit.location

@@ -1,18 +1,19 @@
 Proximity:
-  Distance: 3
+  Distance: 5
   Script:
     - chat "An ice fountain..."
 
 Interact:
   Script:
     - if player.inventory.contains#IceSpell.!
-    - chat "You have discovered the Ice Spell! You are now empowered with the Ice Spell"
+    - chat "You have discovered the Ice Spell! You are now empowered with the Ice Spell. You'll find a fountain in your house."
     - setspell Ice
     - give IceSpell
-    - end
-    - if player.spell_type#Ice.!
-    - chat "You now are empowered with the ice spell!"
+
+    - elseif player.spell_type#Ice.!
+    - chat "You now are empowered with the Ice Spell!"
     - setspell Ice
+
     - else
     - chat "You are already equipped with the ice spell"
     

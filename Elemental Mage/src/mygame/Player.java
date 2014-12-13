@@ -65,7 +65,7 @@ public class Player extends Node {
   
   public void fail() {
       
-    stateManager.getState(SceneManager.class).initScene("Scenes/PlayerHouse.j3o");
+    stateManager.getState(SceneManager.class).initScene("Scenes/PlayerHouse.j3o", null);
   
   }
   

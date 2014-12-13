@@ -41,10 +41,10 @@ public class SceneManager extends AbstractAppState {
     rootNode            = this.app.getRootNode();
     scene               = new Node();
     physics             = this.stateManager.getState(PlayerManager.class).physics;
-    initScene("Scenes/PlayerHouse.j3o");
+    initScene("Scenes/PlayerHouse.j3o", null);
     }
   
-  public void initScene(String scenePath) {
+  public void initScene(String scenePath, String spotTag) {
     
     stateManager.attach(physics);
     
@@ -58,6 +58,9 @@ public class SceneManager extends AbstractAppState {
     scene = (Node) assetManager.loadModel(scenePath);
     addPhys();
 
+    if (spotTag != null)
+    scene.getChild("StartSpot").setLocalTranslation((Vector3f)(stateManager.getState(EntityManager.class).parser.parser.parseTag(stateManager, spotTag, null)));
+    
     stateManager.getState(AudioManager.class).stopSong();
     stateManager.getState(AudioManager.class).playSong();
     

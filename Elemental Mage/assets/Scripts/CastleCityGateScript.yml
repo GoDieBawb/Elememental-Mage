@@ -5,4 +5,4 @@ Proximity:
 
 Interact:
   Script:
-    - changescene City
+    - changescene City entity#CastleExit.location

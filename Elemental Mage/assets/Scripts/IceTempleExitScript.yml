@@ -5,4 +5,4 @@ Proximity:
 
 Interact:
   Script:
-    - changescene IcePath
+    - changescene IcePath entity#IceTempleExit.location

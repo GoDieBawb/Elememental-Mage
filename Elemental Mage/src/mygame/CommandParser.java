@@ -19,7 +19,7 @@ import java.util.Map;
 public class CommandParser {
 
     private AppStateManager stateManager;
-    private TagParser       parser;
+    public  TagParser       parser;
     
     public CommandParser(AppStateManager stateManager) {
     
@@ -100,6 +100,15 @@ public class CommandParser {
                 
             }
             
+            else if (command.equals("debugtag")) {
+            
+              if (!go)
+                continue;
+                String[] a     = ((String) commands.get(i)).split(" ", 2);
+                System.out.println(parser.parseTag(stateManager, a[1], entity));
+            
+            }
+            
             else if (command.equals("finish")) {
             
                 if(!go)
@@ -128,9 +137,20 @@ public class CommandParser {
             
                 if (!go)
                 continue;
-                stateManager.getState(SceneManager.class).initScene("Scenes/" + args[1] + ".j3o");
-                stateManager.getState(EntityManager.class).reloadScripts();
-            
+                    
+                stateManager.getState(SceneManager.class).initScene("Scenes/" + args[1] + ".j3o", null);
+                    
+                try {
+                        
+                    System.out.println(parser.parseTag(stateManager, args[2], entity));
+                    entity.player.phys.warp((Vector3f)(parser.parseTag(stateManager, args[2], entity)));
+                        
+                }
+                    
+                catch(Exception e) {  
+                    
+                }
+                    
             }
             
             else if (command.equals("setmodel")) {

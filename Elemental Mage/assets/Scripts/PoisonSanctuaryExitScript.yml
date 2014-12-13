@@ -5,4 +5,4 @@ Proximity:
 
 Interact:
   Script:
-    - changescene PoisonHouse
+    - changescene PoisonHouse entity#PoisonSanctuaryExit.location

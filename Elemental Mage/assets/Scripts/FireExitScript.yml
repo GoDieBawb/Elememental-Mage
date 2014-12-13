@@ -5,5 +5,4 @@ Proximity:
 
 Interact:
   Script:
-    - changescene Forest
-    - move player entity#Rocks.location
+    - changescene Forest entity#Rocks.location

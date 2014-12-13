@@ -5,4 +5,4 @@ Proximity:
 
 Interact:
   Script:
-    - changescene SwampPath
+    - changescene SwampPath entity#PoisonHouseExit.location

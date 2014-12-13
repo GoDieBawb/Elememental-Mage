@@ -9,9 +9,11 @@ Interact:
     - give LightSpell
     - chat "You have discovered the Light Spell! You are now empowered with the Light Spell"
     - setspell Light
-    - end
 
-    - if player.spell_type#Light.!
-    - chat "You now are empowered with the ice spell!"
+    - elseif player.spell_type#Light.!
+    - chat "You now are empowered with the Light Spell!"
     - setspell Light
+
+    - else
+    - chat "You are already emporewed with the Light Spell"
     

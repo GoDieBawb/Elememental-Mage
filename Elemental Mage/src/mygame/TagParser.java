@@ -34,7 +34,7 @@ public class TagParser {
                 if (args[i].contains("#")) {
                 
                     String[] strAr = args[i].split("#");
-                    obj            = entity.getParent().getChild(strAr[1]);
+                    obj            = stateManager.getState(SceneManager.class).scene.getChild(strAr[1]);
                     
                 }
                 

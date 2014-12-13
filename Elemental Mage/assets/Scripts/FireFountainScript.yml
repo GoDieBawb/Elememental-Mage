@@ -1,18 +1,19 @@
 Proximity:
-  Distance: 2
+  Distance: 6
   Script:
     - chat "A fire fountain..."
 
 Interact:
   Script:
     - if player.inventory.contains#FireSpell.!
-    - chat "You have discovered the Fire Spell! You are now empowered with the Fire Spell"
+    - chat "You have discovered the Fire Spell! You are now empowered with the Fire Spell. You'll find a fountain in your house."
     - setspell Fire
     - give FireSpell
-    - end
-    - if player.spell_type#Fire.!
+
+    - elseif player.spell_type#Fire.!
     - chat "You now are empowered with the fire spell!"
     - setspell Fire
+
     - else
     - chat "You are already empowered with the fire spell."
     
