@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "Curse you Papa... Oh! I didn't see you there hello."
+
+Interact:
+  Script:
+    - chat "I'm hot on the trail of those... Well nevermind."

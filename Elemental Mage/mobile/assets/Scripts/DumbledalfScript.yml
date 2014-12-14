@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "You shall not pass... Wizarding School!"
+
+Interact:
+  Script:
+    - chat "10 points to the shire!"

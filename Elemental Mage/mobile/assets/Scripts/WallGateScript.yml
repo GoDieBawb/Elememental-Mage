@@ -1,0 +1,10 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - if entity.ishid.!
+    - chat "The Gate is locked."
+
+Start:
+  Script:
+    - if player.inventory.contains#openedGate
+    - hide

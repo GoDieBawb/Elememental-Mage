@@ -1,0 +1,25 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if entity.ishid.!
+    - chat "Ice blocks the road here."
+
+Interact:
+  Script:
+    - if entity.ishid.!
+    - chat "This ice is quite cold and too slippery to climb over."
+
+Hit:
+  Script:
+    - if player.spell_type#Fire
+    - give meltBlock
+    - chat "The fire melts the ice blocking the path away."
+    - hide
+
+    - else
+    - chat "Doesnt seem to have any effect."
+
+Start:
+  Script:
+    - if player.inventory.contains#meltBlock
+    - hide

@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "Welome to my house"
+
+Interact:
+  Script:
+    - chat "The power of the Fire Spell was lost long ago in the ruins nearby."

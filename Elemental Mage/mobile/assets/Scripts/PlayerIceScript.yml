@@ -1,0 +1,18 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if entity.ishid.!
+    - chat "A Ice Fountain sits in your house."
+
+Interact:
+  Script:
+    - if player.spell_type#Ice
+    - chat "You are already empowered with ice."
+    - else
+    - chat "You are now empowered with the Ice Spell"
+    - setspell Ice
+ 
+Start:
+  Script:
+    - if player.inventory.contains#IceSpell.!
+    - hide

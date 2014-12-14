@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "Gate to Field"
+
+Interact:
+  Script:
+    - changescene Field entity#BeachExit.location

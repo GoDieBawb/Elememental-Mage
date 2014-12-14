@@ -1,0 +1,19 @@
+Proximity:
+  Distance: 5
+  Enter:
+    - chat "A fountain of light..."
+
+Interact:
+  Script:
+    - if player.inventory.contains#LightSpell.!
+    - give LightSpell
+    - chat "You have discovered the Light Spell! You are now empowered with the Light Spell"
+    - setspell Light
+
+    - elseif player.spell_type#Light.!
+    - chat "You now are empowered with the Light Spell!"
+    - setspell Light
+
+    - else
+    - chat "You are already emporewed with the Light Spell"
+    

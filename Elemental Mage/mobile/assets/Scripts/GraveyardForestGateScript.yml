@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 6
+  Enter:
+    - chat "Gate to Forest"
+
+Interact:
+  Script:
+    - changescene Forest entity#GraveyardExit.location

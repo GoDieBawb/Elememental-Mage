@@ -1,0 +1,8 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "I'm not going to evacuate, why are you still here?"
+
+Interact:
+  Script:
+    - chat "Have you not heard? The Castle has been invaded and Captain Armstrong has ordered an evacuation."

@@ -1,0 +1,20 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "Hit me"
+
+Interact:
+  Script:
+    - chat "Hit me with a spell."
+    - debug "Interacting"
+
+Hit:
+  Script:
+    - if player.inventory.contains#1
+    - setsmodel Wizard
+    - take 1
+    - else
+    - give 1
+    - setmodel Cerberus
+    - end
+    - chat "Im changed"

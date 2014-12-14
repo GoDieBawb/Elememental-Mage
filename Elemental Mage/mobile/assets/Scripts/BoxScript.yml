@@ -1,0 +1,4 @@
+Hit:
+  Script:
+    - chat "You hit a box"
+    - hide
