@@ -14,9 +14,7 @@ import com.jme3.input.MouseInput;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.input.controls.KeyTrigger;
 import com.jme3.input.controls.MouseButtonTrigger;
-import com.jme3.math.Vector2f;
 import com.jme3.math.Vector3f;
-import tonegod.gui.core.Screen;
 
 /**
  *
