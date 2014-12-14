@@ -4,6 +4,7 @@ C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\res\drawab
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\res\drawable-mdpi\ic_launcher.png \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\res\drawable-xhdpi\ic_launcher.png \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\res\layout\main.xml \
+C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\res\values\integers.xml \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\res\values\strings.xml \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\bin\res\drawable-hdpi\ic_launcher.png \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\bin\res\drawable-ldpi\ic_launcher.png \
@@ -15,6 +16,7 @@ C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Mat
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Materials \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\META-INF \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Models \
+C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Save \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Scenes \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Scripts \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Shaders \
@@ -302,6 +304,7 @@ C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Mod
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Models\Warrior\Warrior.png \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Models\Wizard\Wizard.j3o \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Models\Wizard\Wizard.png \
+C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Save\Player.yml \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Scenes\Beach.j3o \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Scenes\Castle.j3o \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\assets\Scenes\CastleInterior.j3o \

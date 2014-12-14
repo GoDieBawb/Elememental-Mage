@@ -25,10 +25,11 @@ public class SceneManager extends AbstractAppState {
   private AppStateManager     stateManager;
   private AssetManager        assetManager;
   public  Node                scene;
-  private BulletAppState      physics;
-  private Player              player;
+  public  BulletAppState      physics;
+  public  Player              player;
   private Node                rootNode;
   private EntityManager       entityManager;
+  private String              scenePath;
   
   @Override
   public void initialize(AppStateManager stateManager, Application app){
@@ -37,14 +38,14 @@ public class SceneManager extends AbstractAppState {
     this.stateManager   = this.app.getStateManager();
     this.assetManager   = this.app.getAssetManager();
     entityManager       = stateManager.getState(EntityManager.class);
-    player              = this.stateManager.getState(PlayerManager.class).player;
     rootNode            = this.app.getRootNode();
     scene               = new Node();
-    physics             = this.stateManager.getState(PlayerManager.class).physics;
-    initScene("Scenes/PlayerHouse.j3o", null);
+    physics             = new BulletAppState();
+    player              = stateManager.getState(PlayerManager.class).player;
+    initScene();
     }
   
-  public void initScene(String scenePath, String spotTag) {
+  public void initScene() {
     
     stateManager.attach(physics);
     
@@ -57,9 +58,6 @@ public class SceneManager extends AbstractAppState {
 
     scene = (Node) assetManager.loadModel(scenePath);
     addPhys();
-
-    if (spotTag != null)
-    scene.getChild("StartSpot").setLocalTranslation((Vector3f)(stateManager.getState(EntityManager.class).parser.parser.parseTag(stateManager, spotTag, null)));
     
     stateManager.getState(AudioManager.class).stopSong();
     stateManager.getState(AudioManager.class).playSong();
@@ -77,6 +75,21 @@ public class SceneManager extends AbstractAppState {
     makeUnshaded(app.getRootNode());
     
     }
+  
+  public String getScenePath() {
+  
+      return scenePath;
+  
+  }
+  
+  public void setScenePath(String scenePath) {
+  
+      this.scenePath = scenePath;
+      
+      if(player != null)
+      player.setScenePath(scenePath);
+  
+  }
   
   public void removeScene() {
     physics.getPhysicsSpace().removeAll(scene);

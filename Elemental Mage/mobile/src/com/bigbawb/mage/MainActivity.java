@@ -32,5 +32,14 @@ public class MainActivity extends AndroidHarness{
         // Set the default logging level (default=Level.INFO, Level.ALL=All Debug Info)
         LogManager.getLogManager().getLogger("").setLevel(Level.INFO);
     }
+    
+    @Override
+    public void onDestroy() {
+        
+        super.onDestroy();
+        System.runFinalization();
+        android.os.Process.killProcess(android.os.Process.myPid());
+        
+    }    
  
 }

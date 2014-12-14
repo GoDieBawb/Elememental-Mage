@@ -8,6 +8,7 @@ C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\snake
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\nifty-default-controls.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-niftygui.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-core.jar \
+C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\google-play-services.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\tonegod.gui.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\MyGame.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\j-ogg-vorbisd.jar \
@@ -15,8 +16,8 @@ C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\nifty
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\j-ogg-oggd.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\eventbus.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-bullet.jar \
-C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-effects.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-terrain.jar \
+C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-effects.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\xmlpull-xpp3.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\jME3-networking.jar \
 C:\Users\Bawb\Documents\GitHub\Elememental-Mage\Elemental Mage\mobile\libs\nifty.jar \

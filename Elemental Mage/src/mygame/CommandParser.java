@@ -137,8 +137,9 @@ public class CommandParser {
             
                 if (!go)
                 continue;
-                    
-                stateManager.getState(SceneManager.class).initScene("Scenes/" + args[1] + ".j3o", null);
+                
+                stateManager.getState(SceneManager.class).setScenePath("Scenes/" + args[1] + ".j3o");
+                stateManager.getState(SceneManager.class).initScene();
                     
                 try {
                         

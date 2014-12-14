@@ -15,17 +15,17 @@ import com.jme3.bullet.BulletAppState;
  */
 public class PlayerManager extends AbstractAppState {
 
-  public Player           player;
-  public BulletAppState   physics;
-  private AppStateManager stateManager;
+  public  Player           player;
+  public  BulletAppState   physics;
+  private AppStateManager  stateManager;
   
   @Override
   public void initialize(AppStateManager stateManager, Application app) {
       
       super.initialize(stateManager, app);
-      player            = new Player(stateManager);
-      physics           = new BulletAppState();
+      physics           = stateManager.getState(SceneManager.class).physics;
       this.stateManager = stateManager;
+      player            = new Player(stateManager);
       
   }
   
@@ -40,6 +40,14 @@ public class PlayerManager extends AbstractAppState {
       
       }
   
+  }
+  
+  @Override
+  public void cleanup(){
+      
+      player.savePlayerInfo(stateManager);
+      System.out.println("Saving");
+      
   }
     
 }

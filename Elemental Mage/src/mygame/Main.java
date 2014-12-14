@@ -16,7 +16,6 @@ public class Main extends SimpleApplication {
     setShowSettings(false);
     setDisplayFps(false);
     setDisplayStatView(false);
-    stateManager.attach(new AudioManager());
     stateManager.attach(new PlayerManager());
     stateManager.attach(new InteractionManager());
     stateManager.attach(new EntityManager());
@@ -24,6 +23,7 @@ public class Main extends SimpleApplication {
     stateManager.attach(new GuiManager());
     stateManager.attach(new CameraManager());
     stateManager.attach(new SpellManager());
+    stateManager.attach(new AudioManager());
     }
 
     @Override
