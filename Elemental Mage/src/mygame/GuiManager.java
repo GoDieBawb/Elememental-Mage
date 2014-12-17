@@ -56,7 +56,6 @@ public class GuiManager extends AbstractAppState {
     alertTitle        = "";
     initScreen();
     this.app.getGuiNode().addControl(screen);
-    //this.app.getInputManager().setSimulateMouse(true);
     initInteractButton();
     initShootButton();
     initEyeButton();
@@ -78,7 +77,11 @@ public class GuiManager extends AbstractAppState {
         @Override
         public void onTouchEvent(TouchEvent evt) {
             
-            InteractionManager a = stateManager.getState(InteractionManager.class);    
+            InteractionManager a = stateManager.getState(InteractionManager.class);
+            float xSpot          = evt.getX();
+            float ySpot          = evt.getY();
+            
+            if (ySpot > screen.getHeight()/3 && ySpot < screen.getHeight() - screen.getHeight()/3) {
             
             if (evt.getType() == evt.getType().DOWN) {
                 isDown = true;
@@ -86,19 +89,18 @@ public class GuiManager extends AbstractAppState {
             }
             
             else if (evt.getType() == evt.getType().MOVE) {   
-                
-                float xSpot = evt.getX();
-                float ySpot = evt.getY();
-            
-                if (ySpot > screen.getHeight()/3 && ySpot < screen.getHeight() - screen.getHeight()/3) {
                     
                     if (xSpot > prevX)
-                    a.panLeft = true;
+                        a.panLeft = true;
+                    
                     else if (xSpot < prevX)
-                    a.panRight = true;
+                        a.panRight = true;
+                    
                     else {
-                    a.panLeft  = false;
-                    a.panRight = false;
+                        
+                        a.panLeft  = false;
+                        a.panRight = false;
+                        
                     }
                     
                 }
@@ -122,7 +124,7 @@ public class GuiManager extends AbstractAppState {
         
         @Override
         public void onMouseButtonEvent(MouseButtonEvent evt) {
-            
+                
             InteractionManager a = stateManager.getState
                                        (InteractionManager.class); 
             
@@ -210,6 +212,7 @@ public class GuiManager extends AbstractAppState {
             
             stateManager.getState(CameraManager.class).isShoot = false;
             stateManager.getState(CameraManager.class).shootCam.setEnabled(false);
+            this.app.getInputManager().setSimulateMouse(false);
             interactButton.setText("Check");
             
         }
@@ -219,6 +222,7 @@ public class GuiManager extends AbstractAppState {
             stateManager.getState(CameraManager.class).isShoot = true;
             app.getCamera().setLocation(player.getWorldTranslation().add(0,1.5f,0));
             stateManager.getState(CameraManager.class).shootCam.setEnabled(true);
+            app.getInputManager().setSimulateMouse(true);
             interactButton.setText("Cast");
             
         }
@@ -276,7 +280,7 @@ public class GuiManager extends AbstractAppState {
     }
 
   private void initJoyStick(){
-    stick = new Joystick(screen, Vector2f.ZERO, (int)(screen.getWidth()/6)) {
+    stick = new Joystick(screen, Vector2f.ZERO, (int)(screen.getWidth()/7)) {
     
     @Override
     public void onUpdate(float tpf, float deltaX, float deltaY) {
@@ -378,6 +382,10 @@ public class GuiManager extends AbstractAppState {
         }
 
         panMult = FastMath.abs(newX - prevX)*15;
+        
+        if (panMult > 25)
+        panMult = 25;
+        
         prevX   = newX;
     
     }

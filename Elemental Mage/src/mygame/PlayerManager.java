@@ -43,7 +43,7 @@ public class PlayerManager extends AbstractAppState {
   }
   
   @Override
-  public void cleanup(){
+  public void cleanup() {
       
       player.savePlayerInfo(stateManager);
       System.out.println("Saving");

@@ -5,6 +5,8 @@ import com.jme3.app.AndroidHarness;
 import com.jme3.system.android.AndroidConfigChooser.ConfigType;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
+import android.os.Bundle;
+import mygame.AndroidManager;
  
 public class MainActivity extends AndroidHarness{
  
@@ -14,8 +16,11 @@ public class MainActivity extends AndroidHarness{
      * Install the 'Android' plugin under Tools->Plugins->Available Plugins
      * to get error checks and code completion for the Android project files.
      */
+    private AndroidManager androidManager;
  
-    public MainActivity(){
+    public MainActivity()  {
+        
+        this.splashPicID = R.drawable.splash;
         // Set the application class to run
         appClass = "mygame.Main";
         // Try ConfigType.FASTEST; or ConfigType.LEGACY if you have problems
@@ -31,6 +36,19 @@ public class MainActivity extends AndroidHarness{
         mouseEventsEnabled = true;
         // Set the default logging level (default=Level.INFO, Level.ALL=All Debug Info)
         LogManager.getLogManager().getLogger("").setLevel(Level.INFO);
+        
+    }
+    
+    @Override
+    public void onCreate(Bundle state) {
+        
+        super.onCreate(state);
+        if (app != null) {
+            app.getStateManager().attach(new AndroidManager());
+            androidManager = app.getStateManager().getState(AndroidManager.class);
+            androidManager.setFilePath(getFilesDir().toString());
+        }        
+        
     }
     
     @Override

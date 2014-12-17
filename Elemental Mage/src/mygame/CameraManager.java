@@ -27,6 +27,7 @@ public class CameraManager extends AbstractAppState {
   private float             panMult;
   public  boolean           isShoot;
   public  ChaseCamera       shootCam;
+  private ChaseCamera       chaseCam;
   
   @Override
   public void initialize(AppStateManager stateManager, Application app){
@@ -35,9 +36,45 @@ public class CameraManager extends AbstractAppState {
     this.stateManager   = this.app.getStateManager();
     this.player         = this.stateManager.getState(PlayerManager.class).player;
     panMult             = stateManager.getState(GuiManager.class).panMult;
+    initChaseCam();
     initCamera();
     initShootCam();
     }
+  
+  //Creates camera
+  public void initChaseCam() {
+      
+      //Creates a new chase cam and attached it to the player.model for the game
+      chaseCam = new ChaseCamera(this.app.getCamera(), player, this.app.getInputManager());
+      chaseCam.setMinDistance(0.5f);
+      chaseCam.setMaxDistance(6);
+      chaseCam.setDefaultDistance(5);
+      chaseCam.setDragToRotate(true);
+      chaseCam.setRotationSpeed(5f);
+      chaseCam.setLookAtOffset(player.getLocalTranslation().add(0, 1.2f, 0));
+      chaseCam.setDefaultVerticalRotation(.145f);
+      chaseCam.setMaxVerticalRotation(.145f);
+      chaseCam.setMinVerticalRotation(.145f);
+      
+  }
+  
+  private void chaseCamMove() {
+      
+      if (chaseCam.getDistanceToTarget() < 1){
+        
+          chaseCam.setMinVerticalRotation(0f);
+          chaseCam.setMaxVerticalRotation(5f);
+        
+      }
+    
+      else {
+        
+          chaseCam.setMaxVerticalRotation(.145f);
+          chaseCam.setMinVerticalRotation(.145f); 
+        
+      }
+    
+  }
   
   //Creates camera
   private void initCamera() {
@@ -73,6 +110,10 @@ public class CameraManager extends AbstractAppState {
       
       //cam.lookAt(cameraLook, new Vector3f(0,1,0));
       slerpLookAt(cameraLook, tpf);
+      
+      if (cam.getLocation().distance(player.getWorldTranslation()) > 6f){
+          cam.setLocation(cameraSpot);
+      }
  
       if (cam.getLocation().distance(player.getWorldTranslation()) > 4 && !isPan) {
           
@@ -161,6 +202,12 @@ public class CameraManager extends AbstractAppState {
      
      else if (isShoot) {
         
+     
+     }
+     
+     else if (!topDown && !isShoot) {
+     
+         chaseCamMove();
      
      }
     
