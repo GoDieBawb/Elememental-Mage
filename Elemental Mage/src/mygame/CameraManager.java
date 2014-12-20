@@ -30,49 +30,42 @@ public class CameraManager extends AbstractAppState {
   private ChaseCamera       chaseCam;
   
   @Override
-  public void initialize(AppStateManager stateManager, Application app){
-    super.initialize(stateManager, app);
-    this.app            = (SimpleApplication) app;
-    this.stateManager   = this.app.getStateManager();
-    this.player         = this.stateManager.getState(PlayerManager.class).player;
-    panMult             = stateManager.getState(GuiManager.class).panMult;
-    initChaseCam();
-    initCamera();
-    initShootCam();
-    }
+  public void initialize(AppStateManager stateManager, Application app) {
+      
+      super.initialize(stateManager, app);
+      this.app            = (SimpleApplication) app;
+      this.stateManager   = this.app.getStateManager();
+      this.player         = this.stateManager.getState(PlayerManager.class).player;
+      panMult             = stateManager.getState(GuiManager.class).panMult;
+      initChaseCam();
+      initCamera();
+      initShootCam();
+    
+  }
   
   //Creates camera
   public void initChaseCam() {
       
       //Creates a new chase cam and attached it to the player.model for the game
       chaseCam = new ChaseCamera(this.app.getCamera(), player, this.app.getInputManager());
-      chaseCam.setMinDistance(0.5f);
+      chaseCam.setMinDistance(6f);
       chaseCam.setMaxDistance(6);
-      chaseCam.setDefaultDistance(5);
-      chaseCam.setDragToRotate(true);
+      chaseCam.setDefaultDistance(6);
+      chaseCam.setDragToRotate(false);
       chaseCam.setRotationSpeed(5f);
       chaseCam.setLookAtOffset(player.getLocalTranslation().add(0, 1.2f, 0));
+      chaseCam.setMaxVerticalRotation(.146f);
       chaseCam.setDefaultVerticalRotation(.145f);
-      chaseCam.setMaxVerticalRotation(.145f);
-      chaseCam.setMinVerticalRotation(.145f);
+      chaseCam.setMinVerticalRotation(.144f);
+      app.getInputManager().setSimulateMouse(true);
       
   }
   
   private void chaseCamMove() {
       
-      if (chaseCam.getDistanceToTarget() < 1){
-        
-          chaseCam.setMinVerticalRotation(0f);
-          chaseCam.setMaxVerticalRotation(5f);
-        
-      }
-    
-      else {
-        
-          chaseCam.setMaxVerticalRotation(.145f);
-          chaseCam.setMinVerticalRotation(.145f); 
-        
-      }
+      //chaseCam.setMaxVerticalRotation(.145f);
+      //chaseCam.setMinVerticalRotation(.145f); 
+      chaseCam.setDefaultVerticalRotation(.145f);
     
   }
   
@@ -91,11 +84,9 @@ public class CameraManager extends AbstractAppState {
       shootCam.setMinDistance(0);
       shootCam.setMaxDistance(.1f);
       shootCam.setDefaultDistance(.1f);
-      shootCam.setDragToRotate(true);
       shootCam.setRotationSpeed(2);
       shootCam.setEnabled(false);
       
-  
   }
   
   private void chaseCamMove(float tpf) {
